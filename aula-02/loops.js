@@ -66,3 +66,15 @@ do {
 }
 while(indice < frutas.length)
 
+
+
+let opcao = 0
+
+while(true) {
+
+    if(opcao === 1) {
+        break;
+    }
+
+    console.log('olá', opcao++)
+}
