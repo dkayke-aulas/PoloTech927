@@ -1,16 +1,16 @@
 function ver() {
-    const pontos = document.getElementById('pontinhos')
+    const spanPontinhos = document.getElementById('pontinhos')
     const textoVerMais = document.getElementById('mais')
     const btnFechar = document.querySelector('#btn-ver')
     
-    if(pontos.style.display === 'none') {
-        pontos.style.display = 'inline'
+    if(spanPontinhos.style.display === 'none') {
+        spanPontinhos.style.display = 'inline'
         btnFechar.innerHTML = "Ver mais"
         textoVerMais.style.display = 'none'
     } 
     else {
-        pontos.style.display = 'none'
-        btnFechar.innerHTML = "Ver menos"
+        spanPontinhos.style.display = 'none'
+        btnFechar.innerText = "Ver menos"
         textoVerMais.style.display = 'inline'
     }
 }
