@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // window.alert('Olá mundo!')
+
+        const ehMaiorIdade = window.confirm("Você é maior de idade?")
+        console.log(ehMaiorIdade)
+
+        if (ehMaiorIdade) {
+            // const nome = window.prompt("Qual é seu nome?", "Convidado")
+            // window.alert(`Olá ${nome?.trim() || "Convidado"}`)
+        }
+        else {
+            // window.location.href = "./nao-pode.html" // sem historico
+            // window.location.replace("./nao-pode.html") // sem historico
+            window.open("./nao-pode.html", "_self") // gera historico
+        }
+
+
+        // const nome = 'Dannyel'
+        // const idade = 25
+        // console.log(`Meu nome é ${nome}, tenho ${idade} de idade`)
+
+        function navegar() {
+            window.open("./nao-pode.html", "_self") // gera historico
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Bem-vindo</h1>
+    <button onclick="navegar()">Ir para não pode</button>
+</body>
+
+</html>

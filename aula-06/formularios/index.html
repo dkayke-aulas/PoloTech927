@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./script.js" defer></script>
+    <style>
+        form {
+            display: flex;
+            flex-direction: column;
+            max-width: 320px;
+            margin: 0 auto;
+        }
+
+        fieldset {
+            border: 0;
+            padding: 0;
+        }
+
+        input[type='radio'] {
+            margin-left: 0;
+            margin-right: 10px;
+        }
+
+        input:not(input[type='radio']), button {
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- <form name="login"> -->
+    <form name="login" onsubmit="submeterFormLogin(); return false">
+        <label for="usuario">Usuário</label>
+        <input type="text" name="usuario" id="usuario">
+
+        <label for="senha">Senha</label>
+        <input type="password" name="senha" id="senha">
+        
+        <fieldset>
+            <label for="salvar">Salvar</label>
+            <input type="radio" name="salvar" id="salvar" value="sim">
+            
+            <label for="nao-salvar">Não Salvar</label>
+            <input type="radio" name="salvar" id="nao-salvar" value="nao" checked>
+        </fieldset>
+
+        <button type="submit">Entrar</button>
+    </form>
+</body>
+</html>
