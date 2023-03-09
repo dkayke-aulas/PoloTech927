@@ -1,0 +1,11 @@
+#c-header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: blueviolet;
+    color: white;
+}
+
+#c-header #btn-sair {
+    max-width: 100px;
+}

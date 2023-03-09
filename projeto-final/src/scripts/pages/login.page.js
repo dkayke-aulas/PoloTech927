@@ -1,35 +1,43 @@
+import { entrar } from "../services/auth.service.js"
+
 const login = document.createElement('form')
 login.setAttribute("id", "p-login")
 
 const events = () => {
-    login.addEventListener('submit', (e) => {
+    login.addEventListener('submit', async (e) => {
         e.preventDefault()
 
         const fd = new FormData(login)
-        const dados = Object.fromEntries(fd)
+        const data = Object.fromEntries(fd)
 
-        console.log(dados)
+        entrar(data)
+            .then((response) => {
+                sessionStorage.setItem('@user', JSON.stringify(response.data))
+                sessionStorage.setItem("@token", response.data.token)
+
+                history.replaceState(null, "", "/#contacts")// modifica a rota sem reload
+                window.location.reload() // força o reload da página com a nova hash
+            })
     })
 }
 
 export const Login = () => {
-    const nome = "Dannyel"
-
     login.innerHTML = `
-        <h1>Olá ${nome}</h1>
-        <label for="username">Usuário</label>
-        <input id="username" name="username" type="text" />
+        <label for="email">Usuário</label>
+        <input id="email" name="email" type="email" />
 
-        <label for="password">Senha</label>
-        <input id="password" name="password" type="password" />
+        <label for="senha">Senha</label>
+        <input id="senha" name="senha" type="password" />
 
-        <label for="salvar">Salvar</label>
-        <input name="salvar" id="salvar" type="radio" value="true" />
-        <label for="nao-salvar">Não salvar</label>
-        <input name="salvar" id="nao-salvar" type="radio" value="false" />
+        <fildset>
+            <label for="salvar">Salvar</label>
+            <input name="salvar" id="salvar" type="radio" value="true" />
+            <label for="nao-salvar">Não salvar</label>
+            <input name="salvar" id="nao-salvar" type="radio" value="false" />
+        </fildset>
 
         <button id="btn-entrar">Entrar</button>
-        <a href="/#404">ERRO</a>
+        <p>Não tem conta? <a href="/#signup">Crie agora!</a></p>
     `
 
     events()

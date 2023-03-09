@@ -1,0 +1,29 @@
+/* Pagina de signup */
+#p-signup {
+  display: flex;
+  flex-direction: column;
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+#p-signup fieldset {
+  border: 0;
+  padding: 0;
+}
+
+#p-signup input[type="radio"] {
+  margin-left: 0;
+  margin-right: 10px;
+}
+
+#p-signup input:not(input[type="radio"]),
+button {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 10px 0;
+}
+
+#p-signup h1 {
+  color: green;
+}

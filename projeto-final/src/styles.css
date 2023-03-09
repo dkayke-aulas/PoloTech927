@@ -1,7 +1,13 @@
-@import url(./styles/login.page.css);
-@import url(./styles/not-found.page.css);
+@import url(./styles/pages/login.page.css);
+@import url(./styles/pages/not-found.page.css);
+@import url(./styles/pages/signup.page.css);
+@import url(./styles/pages/contacts.page.css);
+@import url(./styles/pages/contact-details.page.css);
 
-h1 {
-  color: hotpink;
-  font-family: cursive;
+@import url(./styles/components/header.component.css);
+@import url(./styles/components/card-contact.component.css);
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
