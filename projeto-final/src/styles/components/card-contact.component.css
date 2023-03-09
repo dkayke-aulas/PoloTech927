@@ -1,5 +1,6 @@
 #c-card-contact {
     display: flex;
+    gap: 20px;
     align-items: center;
     background-color: blueviolet;
     color: white;
@@ -19,6 +20,7 @@
     height: 60px;
     background-color: silver;
     color: blueviolet;
+    text-decoration: none;
 }
 
 #c-card-contact > a:hover {

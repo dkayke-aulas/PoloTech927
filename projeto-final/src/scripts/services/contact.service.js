@@ -32,3 +32,17 @@ export const buscarContatos = async () => {
     const response = await fetch(url, options)
     return await response.json()
 }
+
+/*
+    @function excluirContato
+*/
+export const excluirContato = async (idContato) => {
+    const options = {
+        headers,
+        body: JSON.stringify({ idContato }),
+        method: "DELETE",
+    }
+
+    const response = await fetch(url, options)
+    return await response.json()
+}
