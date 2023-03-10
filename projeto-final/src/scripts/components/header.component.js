@@ -1,3 +1,5 @@
+import contacts from './../../asset/contact.png'
+
 export const Header = () => {
     const header = document.createElement('header')
     header.setAttribute("id", "c-header")
@@ -14,8 +16,10 @@ export const Header = () => {
     }
 
     header.innerHTML = `
-        <span>${usuario.nome}</span>
-        <span>Banana</span>
+        <div>    
+            <a href="/#contacts"><img src="${contacts}" alt="logotipo"></a>
+            <span>${usuario.nome}</span>
+        </div>
         <button id="btn-sair" type="button">Sair</button>
     `
 

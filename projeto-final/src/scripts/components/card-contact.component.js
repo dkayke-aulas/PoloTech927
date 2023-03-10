@@ -1,4 +1,6 @@
 import { excluirContato } from "../services/contact.service"
+import trash from './../../asset/trash.png'
+import eye from './../../asset/eye.png'
 
 export const CardContact = (contato) => {
     const cardContact = document.createElement('div')
@@ -30,8 +32,8 @@ export const CardContact = (contato) => {
     cardContact.innerHTML = `
         <h3>${contato.nome}</h3>
         <p>Possui <b>${contato.telefones.length}</b> ${text}</p>
-        <a href="/#contacts">Excluir</a>
-        <a href="/#contacts">Detalhar</a>
+        <a href="/#contacts"><img src="${trash}" alt="Excluir"></a>
+        <a href="/#contacts"><img src="${eye}" alt="Detalhar"></a>
     `
     
     events(contato)
