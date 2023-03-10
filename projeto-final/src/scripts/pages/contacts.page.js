@@ -24,6 +24,7 @@ export const Contacts = () => {
 
     contacts.innerHTML = `
         <h1>Contatos</h1>
+        <a href="#create-contact">Adicionar novo contato</a>
         <div id="cards"></div>
     `
 

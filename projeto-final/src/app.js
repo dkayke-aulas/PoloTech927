@@ -1,5 +1,6 @@
 import { ContactDetails } from './scripts/pages/contact-details.page.js'
 import { Contacts } from './scripts/pages/contacts.page.js'
+import { CreateContact } from './scripts/pages/create-contact.page.js'
 import { Login } from './scripts/pages/login.page.js'
 import { NotFound } from './scripts/pages/not-found.page.js'
 import { Signup } from './scripts/pages/signup.page.js'
@@ -13,6 +14,7 @@ function redirectPage() {
         "#404": { component: NotFound, private: false },
         "#contacts": { component: Contacts, private: true },
         "#contact-datails": { component: ContactDetails, private: true },
+        "#create-contact": { component: CreateContact, private: true },
     }
 
     // recupera a rota pela hash, se não existir recupera a rota #404
